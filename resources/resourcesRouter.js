@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
 	if (req.body.name) {
 		resources
-			.createResource(req.body)
+			.createResource(req.body)    
 			.then((resource) => res.status(201).json(resource))
 			.catch((err) => {
 				console.log(err.message);
